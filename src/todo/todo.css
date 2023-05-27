@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.todo-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+  min-width: 300px;
+}
+@media (min-width: 430px) {
+  .todo-container {
+    width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .todo-container {
+    width: 475px;
+  }
+}
+@media (min-width: 1400px) {
+  .todo-container {
+    width: 550px;
+  }
+}
+.todo-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-container header > h1 {
+  color: teal;
+}
+.todo-container header > span {
+  background-color: teal;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.todo-container form input {
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+.todo-container form input[type="text"] {
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 128, 128, 0.361);
+  padding: 6px;
+  caret-color: teal;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.todo-container form input[type="text"]:focus {
+  border-color: teal;
+}
+.todo-container form input[type="text"]:focus::placeholder {
+  opacity: 0;
+}
+.todo-container form input[type="submit"] {
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.todo-container form input[type="submit"]:hover {
+  background-color: rgba(0, 128, 128, 0.89);
+}
+.todo-container .tasks-container .task {
+  background-color: #232438;
+  margin-bottom: 10px;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.todo-container .tasks-container .task.done {
+  background-color: #ff110096 !important;
+}
+.todo-container .tasks-container .task .text {
+  padding: 10px 30px 10px 10px;
+  cursor: grab;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.406);
+}
+.todo-container .tasks-container .task .text.done {
+  text-decoration: line-through;
+}
+.todo-container .tasks-container .task .close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 2px;
+  border-bottom-left-radius: 5px;
+  transition: 0.5s;
+}
+.todo-container .tasks-container .done .close {
+  background-color: rgba(255, 0, 0, 0.644);
+}
+.todo-container .tasks-container .task .close:hover {
+  background-color: rgba(0, 128, 128, 0.594);
+}
+.todo-container .tasks-container .done .close:hover {
+  background-color: red;
+}
+.todo-container .tasks-container .task .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.todo-container .tasks-container .task .foot .state,
+.todo-container .tasks-container .task .foot .time {
+  padding: 6px 10px;
+}
+.todo-container .btns:is(span, div) {
+  text-align: center;
+  color: teal;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.todo-container .btns span {
+  text-decoration: underline;
+  margin: 10px 8px 3px;
+  display: inline-block;
+}
+.todo-container .btns span.active {
+  color: #232438;
+}
+.todo-container .btns div {
+  margin-top: 10px;
+}
+.todo-container .notasks {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
