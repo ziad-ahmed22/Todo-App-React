@@ -1,28 +1,46 @@
-const Controls = (props) => {
-  const btns = document.querySelectorAll(".btns .btn");
+import { useState } from "react";
 
-  btns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      btns.forEach((btn) => {
-        btn.classList.remove("active");
-      });
-      e.currentTarget.classList.add("active");
-    });
-  });
+const Controls = (props) => {
+  const [activeBtn, setActiveBtn] = useState(1);
+
+  const allTasks = () => {
+    props.showAll();
+    setActiveBtn(1);
+  };
+  const activeTasks = () => {
+    props.showActive();
+    setActiveBtn(2);
+  };
+  const finishedTasks = () => {
+    props.showDone();
+    setActiveBtn(3);
+  };
 
   return (
-    <div>
-      <span className="btn active" onClick={props.showAll}>
-        All Tasks
-      </span>
-      <span className="btn " onClick={props.showActive}>
-        Active Tasks
-      </span>
-      <span className="btn " onClick={props.showDone}>
-        Finished Tasks
-      </span>
+    <>
+      <div className="controls">
+        <span
+          className={activeBtn === 1 ? "btn active" : "btn"}
+          onClick={allTasks}
+        >
+          All Tasks
+        </span>
+        <span
+          className={activeBtn === 2 ? "btn active" : "btn"}
+          onClick={activeTasks}
+        >
+          Active Tasks
+        </span>
+        <span
+          className={activeBtn === 3 ? "btn active" : "btn"}
+          onClick={finishedTasks}
+        >
+          Finished Tasks
+        </span>
+      </div>
       {props.tasksArr.length >= 2 && (
         <div
+          className="del-all"
           onClick={props.delAllTasks}
           style={
             props.show === "all" ? { display: "block" } : { display: "none" }
@@ -31,7 +49,7 @@ const Controls = (props) => {
           Delete All Tasks
         </div>
       )}
-    </div>
+    </>
   );
 };
 

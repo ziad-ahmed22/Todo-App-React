@@ -126,8 +126,12 @@
 .todo-container .tasks-container .task .foot .time {
   padding: 6px 10px;
 }
-.todo-container .btns:is(span, div) {
+.todo-container .btns .controls {
   text-align: center;
+  margin-top: 15px;
+}
+.todo-container .btns .controls > span,
+.todo-container .btns .del-all {
   color: teal;
   font-size: 14px;
   text-decoration: underline;
@@ -135,16 +139,15 @@
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
 }
-.todo-container .btns span {
-  text-decoration: underline;
-  margin: 10px 8px 3px;
-  display: inline-block;
+.todo-container .btns .controls > span {
+  margin: 10px;
 }
-.todo-container .btns span.active {
+.todo-container .btns .controls > span.active {
   color: #232438;
 }
-.todo-container .btns div {
-  margin-top: 10px;
+.todo-container .btns .del-all {
+  width: fit-content;
+  margin: 12px auto 0;
 }
 .todo-container .notasks {
   font-family: Arial, Helvetica, sans-serif;
