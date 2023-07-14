@@ -1,12 +1,9 @@
 # ToDo App With React Js
+-	Allow users to add tasks with data and time information.
+-	Filtering them by status (active or finished).
+-	Save tasks to local storage to display them when the user open the app.
+-	Similar todo app created using Js with a dark theme  Github Repo  |  Live View 
+-	HTML | CSS | React | Responsive
 
-<ul>
-  <li>Adding task by date and time</li>
-  <li>Showing all tasks button</li>
-  <li>Showing finished tasks button</li>
-  <li>Showing active tasks button</li>
-  <li>Delete task button and delete all tasks button</li>
-  <li>toggle task box to (add / remove) (to / from) completed</li>
-</ul>
 <hr/>  
 <a href="https://ziad-ahmed22.github.io/todo-app-react" target="_blank">Live View</a>
