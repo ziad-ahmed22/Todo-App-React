@@ -6,4 +6,4 @@
 -	HTML | CSS | React | Responsive
 
 <hr/>  
-<a href="https://ziad-ahmed22.github.io/todo-app-react" target="_blank">Live View</a>
+<a href="https://ziad-ahmed22.github.io/Todo-React-App/" target="_blank">Live View</a>
